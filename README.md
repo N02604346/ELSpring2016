@@ -1,3 +1,2 @@
 # ELSpring2016
-Template for Spring 2016 Embedded Linux class
-This is a template for students to clone for their work in the class. You should maintain the directory structure
+My name is Roberto Milanese. This is my repository. There are many like it, but this one is mine. My repository is my best friend. It is my life. I must master it as I must master my life. My repository, without me, is useless. Without my repository, I am useless. 

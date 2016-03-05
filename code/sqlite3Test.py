@@ -9,24 +9,22 @@ import sqlite3 as mydb
 import sys
 import datetime
 
-con = mydb.connect('testTime.db')
+con = None
 
-""" with con:
-    
-    cur = con.cursor()    
-    cur.execute('SELECT SQLITE_VERSION()')
-    
-    data = cur.fetchone()
-    
-    print "SQLite version: %s" % data """
-
-
-def logTime():
+try:
+	con = mydb.connect('DateTime.db')
+	cur = con.cursor()
 	t = datetime.time
 	d = datetime.date
 	xdate = str(d.year) + '-' + str(d.month) + '-' + str(d.day)
 	xtime = str(t.hour) + '-' + str(t.minute) + '-' + str(t.second)
-	cur = con.cursor()
-	cur.execute(xdate, xtime)
+	cur.execute("INSERT INTO DTA (DATE, TIME) VALUES (" + xdate + ", " + xtime");")
 
-logTime()
+except mydb.Error, e:
+	
+	print "Error %s:" % e.args[0]
+
+finally:
+
+	if con:
+		con.close()

@@ -21,7 +21,7 @@ def logTemp():
 		d = datetime.date.today()
 		xdate = str(d)
 		xtime = str(t)
-		tempfile = open("/sys/bus/w1/devices/28-00000698116b/w1_slave")
+		tempfile = open("/sys/bus/w1/devices/28-0000069885c5/w1_slave")
 		tempfile_text = tempfile.read()
 		currentTime=time.strftime('%x %X %Z')
 		tempfile.close()

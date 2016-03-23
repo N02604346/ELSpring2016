@@ -15,7 +15,7 @@ def logTemp():
 	con = None
 
 	try:
-		con = mydb.connect('myTempTime.db')
+		con = mydb.connect('/home/pi/Documents/OOP/ELSpring2016/code/myTempTime.db')
 		cur = con.cursor()
 		t = datetime.datetime.time(datetime.datetime.now())
 		d = datetime.date.today()
